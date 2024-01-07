@@ -7,11 +7,11 @@ import { LogOut } from "lucide-react";
 import Link from "next/link";
 import { SearchInput } from "./search-input";
 
-const isUserATeacher = () => {
+export function isUserATeacher() {
   const { user } = useUser();
 
   return user && user.publicMetadata.role === "teacher";
-};
+}
 
 export const NavbarRoutes = () => {
   const pathname = usePathname();
